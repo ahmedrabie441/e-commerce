@@ -138,7 +138,7 @@ export default function NavBar() {
                               >
                                 <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
                                   <img
-                                    src={item.image[0]}
+                                    src={`http://localhost:5000/${item.image[0]}`}
                                     alt={item.name}
                                     className="object-center object-cover"
                                   />
@@ -291,7 +291,7 @@ export default function NavBar() {
                                             >
                                               <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
                                                 <img
-                                                  src={item.image[0]}
+                                                  src={`http://localhost:5000/${item.image[0]}`}
                                                   alt={item.name}
                                                   className="object-center object-cover"
                                                 />

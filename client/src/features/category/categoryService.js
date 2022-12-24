@@ -1,6 +1,7 @@
 import axios from "axios";
+import { URL } from "../../config";
 
-const API_URL = "/api/categories/";
+const API_URL = URL + "/api/categories/";
 
 // get categories
 const getCategories = async () => {

@@ -24,7 +24,7 @@ function Product(props) {
   const onSubmit = (e) => {
     e.preventDefault();
     const formdata = new FormData(e.currentTarget);
-    fetch("/api/products", {
+    fetch("http://localhost:5000/api/products", {
       method: "POST",
       body: formdata,
       credentials: "include",

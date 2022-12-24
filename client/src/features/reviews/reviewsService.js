@@ -1,4 +1,6 @@
-const API_URL = "/api/reviwes/";
+import { URL } from "../../config";
+
+const API_URL = URL + "/api/reviwes/";
 
 // @desc    Get all reviews
 const getReviews = async () => {

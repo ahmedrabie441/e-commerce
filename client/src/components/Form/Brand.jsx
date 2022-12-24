@@ -22,7 +22,7 @@ function Brand() {
   const onSubmit = (e) => {
     e.preventDefault();
     const formdata = new FormData(e.currentTarget);
-    fetch("/api/brands", {
+    fetch("http://localhost:5000/api/brands", {
       method: "POST",
       body: formdata,
     })

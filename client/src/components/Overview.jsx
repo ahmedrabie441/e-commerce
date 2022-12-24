@@ -60,25 +60,31 @@ export default function Overview() {
   // and set it to the product state.
   useEffect(() => {
     const getProduct = async () => {
-      const res = await fetch(`/api/products/${productId}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
+      const res = await fetch(
+        `http://localhost:5000/api/products/${productId}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      );
       const data = await res.json();
       setProduct(data);
     };
 
     const getReviews = async () => {
-      const res = await fetch(`/api/reviwes/product/${productId}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const res = await fetch(
+        `http://localhost:5000/api/reviwes/product/${productId}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
       const { data } = await res.json();
       setReviewsList(data);
     };
@@ -93,7 +99,7 @@ export default function Overview() {
         <div className="mt-6 mx-auto sm:px-6 max-w-7xl px-8 grid grid-cols-3 gap-x-8">
           <div className="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden block">
             <img
-              src={product?.image?.[0]}
+              src={`http://localhost:5000/${product?.image?.[0]}`}
               className="w-full h-full object-center object-cover"
             />
           </div>
@@ -106,14 +112,14 @@ export default function Overview() {
             </div>
             <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
               <img
-                src={product?.image?.[2]}
+                src={`http://localhost:5000/${product?.image?.[2]}`}
                 className="w-full h-full object-center object-cover"
               />
             </div>
           </div>
           <div className="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden aspect-w-3 aspect-h-4">
             <img
-              src={product?.image?.[3]}
+              src={`http://localhost:5000/${product?.image?.[3]}`}
               className="w-full h-full object-center object-cover"
             />
           </div>

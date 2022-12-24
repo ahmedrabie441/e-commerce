@@ -37,7 +37,7 @@ const InnerCard = (props) => {
         <Link to={"/overview/" + props.product._id}>
           <img
             className="max-h-40 w-full object-cover"
-            src={props.product.image[0]}
+            src={`http://localhost:5000/${props.product.image[0]}`}
             alt="product image"
           />
           <div className="bg-white dark:bg-gray-800 w-full px-4">

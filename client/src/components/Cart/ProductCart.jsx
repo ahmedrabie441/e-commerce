@@ -12,7 +12,10 @@ function ProductCart(props) {
   return (
     <div className=" flex gap-8">
       <div className="w-40 h-40">
-        <img className="w-full h-full" src={props.product.image[0]} />
+        <img
+          className="w-full h-full"
+          src={`http://localhost:5000/${props?.product?.image[0]}`}
+        />
       </div>
       <div className="flex flex-col relative justify-center">
         <button onClick={handleRemove}>

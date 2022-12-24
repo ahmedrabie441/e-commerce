@@ -5,7 +5,9 @@ import Ordar_summary from "./Order-summary";
 import { useSelector } from "react-redux";
 const ProductListCart = () => {
   const { carts } = useSelector((state) => state.shoppingCart);
-
+console.log("====================================");
+console.log(carts);
+console.log("====================================");
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />

@@ -23,7 +23,7 @@ const Product = (props) => {
         >
           <img
             className="block overflow-hidden w-full"
-            src={props.product.image[0]}
+            src={`http://localhost:5000/{props.product.image[0]}`}
           />
         </div>
       </div>

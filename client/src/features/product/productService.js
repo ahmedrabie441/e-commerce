@@ -1,4 +1,5 @@
-const API_URL = "/api/products";
+import { URL } from "../../config";
+const API_URL = URL + "/api/products";
 
 // get products
 const getAllProducts = async () => {

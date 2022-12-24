@@ -67,22 +67,23 @@ const Cat = (props) => {
   
   return (
     <div className=" p-4 bg-white dark:bg-gray-800 w-64 m-auto">
-    <div className="w-full h-full text-center">
+      <div className="w-full h-full text-center">
         <div className="flex h-full flex-col justify-between">
-            <div className="mt-4 w-12 h-12 m-auto" >
-                <img className="block w-full" src={props.item.img}/>
-            </div>
-            <p className="text-gray-800 dark:text-gray-200 text-xl font-bold mt-4">
-                 {props.item.name}
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 text-lg py-2 mb-4 px-6">
-                 {props.item.description} 
-            </p>
-
+          <div className="mt-4 w-12 h-12 m-auto">
+            <img
+              className="block w-full"
+              src={`http://localhost:5000/${props.item.img}`}
+            />
+          </div>
+          <p className="text-gray-800 dark:text-gray-200 text-xl font-bold mt-4">
+            {props.item.name}
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg py-2 mb-4 px-6">
+            {props.item.description}
+          </p>
         </div>
+      </div>
     </div>
-</div>
-
   );
 };
 export default Brands;
